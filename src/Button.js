@@ -5,7 +5,7 @@ import {observer, inject} from 'mobx-react';
 @observer
 class Button extends Component {
     render() {
-        return <div> {this.props.toDoList.todos.length} I'm a button!</div>
+        return <div> {this.props.toDoList.todos.length} I&#39;m a button!</div>
     }
 }
 
