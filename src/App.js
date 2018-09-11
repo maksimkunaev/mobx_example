@@ -7,10 +7,6 @@ import Block from "./Block.js"
 @observer
 class App extends Component {
 
-    componentDidMount() {
-        // this.props.toDoList.todos.splice(0)
-    }
-
     addToDo() {
         this.props.toDoList.addToDo({
             task: this.task.value,

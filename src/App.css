@@ -11,7 +11,7 @@
     -ms-align-items: center;
     align-items: center;
 }
-/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+
 .checkbox-custom {
     position: relative;
     width: 29px;
@@ -21,23 +21,22 @@
     margin-right: 13px;
     background-repeat: no-repeat;
 }
-/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+
 .checkbox-custom,
 .label {
     display: inline-block;
     vertical-align: middle;
 }
-/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
-.checkbox:checked + .checkbox-custom::before {
-    content: "";             /* Добавляем наш псевдоэлемент */
-    display: block;          /* Делаем его блочным элементом */
-    position: absolute;      /* Позиционируем его абсолютным образом */
-    /* Задаем расстояние от верхней, правой, нижней и левой границы */
+
+.checkbox:checked+.checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
     top: 2px;
     right: 2px;
     bottom: 2px;
     left: 2px;
-    background: url("./images/checked.png");     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+    background: url("./images/checked.png");
     background-size: 100%;
     border-radius: 2px;
 }
@@ -54,18 +53,19 @@
 
 .App {
     font-size: 2em;
-        padding: 32px 41px;
+    padding: 32px 41px;
 }
 
 
 .addBtn {
     font-size: 1em;
-        border-radius: 8px;
-        border: none;
-        border: 1px solid #54d1d6;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid #54d1d6;
 }
 
-.edit, .delete {
+.edit,
+.delete {
     margin-left: 25px;
     font-size: 15px;
     font-family: monospace;

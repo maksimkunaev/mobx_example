@@ -16,7 +16,6 @@ class TodoList {
 
     @observable alarm = 'sleep...'
 
-
     @computed get unfinishedTodoCount() {
         return this.todos.filter(todo => !todo.finished).length;
     }
@@ -26,7 +25,6 @@ class TodoList {
     }
 
     @action wakeUp(s) {
-        console.log(s)
         const fn = () => {
             this.alarm = 'WAKE UP!'
         }
